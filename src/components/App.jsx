@@ -9,7 +9,20 @@ export class App extends Component {
   
   render() {
     return (
-      <p>1</p>
+      <section>
+        <p>Please leave feedback</p>
+        <div>
+          <button type="botton" onClick={''}>Good</button>
+          <button type="botton" onClick={''}>Neutral</button>
+          <button type="botton" onClick={''}>Bad</button>
+        </div>
+        <div>
+          <p>Statistics</p>
+          <p>Good: </p>
+          <p>Neutral: </p>
+          <p>Bad: </p>
+      </div>
+      </section>
     )
   }
 };
