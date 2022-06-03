@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+// import { DivList } from './FeedbackOptions.styled';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
