@@ -9,7 +9,6 @@ export class App extends Component {
 
   onIncrementGood = () => {
     this.setState(prev => {return { good: prev.good +1,} })
- 
   } 
 
   onIncrementNeutral = () => {
@@ -19,6 +18,15 @@ export class App extends Component {
   onIncrementBad = () => {
     this.setState(prev => {return { bad: prev.bad +1,} })
   } 
+
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  }
+
+  countPositiveFeedbackPercentage = () => {
+    return Math.round(this.state.good / this.countTotalFeedback() * 100);
+  };
   
   render() {
     const { good, neutral, bad } = this.state;
@@ -35,6 +43,8 @@ export class App extends Component {
           <p>Good:{good} </p>
           <p>Neutral: {neutral} </p>
           <p>Bad: {bad} </p>
+          <p>Total: {this.countTotalFeedback()} </p>
+          <p>Positive feedback: {this.countPositiveFeedbackPercentage()}% </p>
       </div>
       </section>
     )
