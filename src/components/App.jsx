@@ -11,24 +11,6 @@ export class App extends Component {
     bad: 0,
   };
 
-  // onIncrementGood = () => {
-  //   this.setState(prev => {
-  //     return { good: prev.good + 1 };
-  //   });
-  // };
-
-  // onIncrementNeutral = () => {
-  //   this.setState(prev => {
-  //     return { neutral: prev.neutral + 1 };
-  //   });
-  // };
-
-  // onIncrementBad = () => {
-  //   this.setState(prev => {
-  //     return { bad: prev.bad + 1 };
-  //   });
-  // };
-
   countFeedback = e => {
     const feed = e.target.name;
     this.setState(prev => ({ [feed]: prev[feed] + 1 }));
