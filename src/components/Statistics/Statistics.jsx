@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Notification from 'components/Notification/Notification';
+import { Paragraph } from './Statistics.styled';
 
 export default function Statistics({
   good,
@@ -12,11 +13,11 @@ export default function Statistics({
     <div>
       {total > 0 ? (
         <>
-          <p>Добре:{good} </p>
-          <p>Нейтрально: {neutral} </p>
-          <p>Погано: {bad} </p>
-          <p>Всього: {total} </p>
-          <p>Позитивних відгуків: {positivePercentage}% </p>
+          <Paragraph>Добре: {good} </Paragraph>
+          <Paragraph>Нейтрально: {neutral} </Paragraph>
+          <Paragraph>Погано: {bad} </Paragraph>
+          <Paragraph>Всього: {total} </Paragraph>
+          <Paragraph>Позитивних відгуків: {positivePercentage}% </Paragraph>
         </>
       ) : (
         <Notification message="Відгуки відсутні" />

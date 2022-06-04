@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-// import { DivList } from './FeedbackOptions.styled';
+import { DivList, Button } from './FeedbackOptions.styled';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <DivList>
       {options.map(({ nameUa, id }) => (
         <div key={id}>
-          <button type="button" name={id} onClick={onLeaveFeedback}>
+          <Button type="button" name={id} onClick={onLeaveFeedback}>
             {nameUa}
-          </button>
+          </Button>
         </div>
       ))}
-    </div>
+    </DivList>
   );
 }
 

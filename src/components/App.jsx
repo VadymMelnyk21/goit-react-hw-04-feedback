@@ -4,6 +4,8 @@ import Section from './Section/Section';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 
+import { Container } from './App.styled';
+
 export class App extends Component {
   state = {
     good: 0,
@@ -42,7 +44,7 @@ export class App extends Component {
     ];
 
     return (
-      <div>
+      <Container>
         <Section title="Будь ласка, залиште свій відгук">
           <FeedbackOptions
             options={buttonFeedName}
@@ -58,7 +60,7 @@ export class App extends Component {
             positivePercentage={this.countPositiveFeedbackPercentage()}
           />
         </Section>
-      </div>
+      </Container>
     );
   }
 }
