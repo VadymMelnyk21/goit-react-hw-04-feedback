@@ -30,8 +30,7 @@ export function App() {
   };
 
   const countTotalFeedback = () => {
-    const totalFeed = [good, neutral, bad];
-    return Object.values(totalFeed).reduce((acc, value) => acc + value, 0);
+    return good + neutral + bad;
   };
 
   const countPositiveFeedbackPercentage = () => {
